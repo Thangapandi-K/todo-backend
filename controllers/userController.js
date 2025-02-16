@@ -83,8 +83,9 @@ const userController = {
             //setting token in cookies
             const cookieOptions = {
                 httpOnly: true,
-                secure: process.env.DEV_MODE === "production",
+                secure: true,
                 path:'/',
+                domain: 'http://localhost:3000',
                 maxAge: 24*60*60*1000
             }
             response.cookie('token', token, cookieOptions);

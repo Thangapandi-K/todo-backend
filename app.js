@@ -12,7 +12,7 @@ import requestLogger from './utils/logger.js';
 const app = express();
 
 //middlewares
-app.use(cors({origin: 'https://todo-list-with-auth.netlify.app', credentials: true}));
+app.use(cors({origin: ['https://todo-list-with-auth.netlify.app', "http://localhost:5173"], credentials: true}));
 app.use(cookieparser());
 app.use(express.json());
 app.use(requestLogger);
